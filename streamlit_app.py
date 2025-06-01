@@ -50,10 +50,17 @@ if st.button("🚀 Scrape Product"):
 
 # Footer
 st.markdown("---")
-st.markdown(
-    """
-    Made with ❤️ using [Streamlit](https://streamlit.io/) by **Mehul Jain**  
-    [![LinkedIn](https://cdn-icons-png.flaticon.com/24/174/174857.png)](https://www.linkedin.com/in/mehul-jain-368020193)
-    """,
-    unsafe_allow_html=True
-)
+
+footer_html = """
+<div style="text-align: center; color: gray; font-size: 14px; margin-top: 20px;">
+    <p>Made with ❤️ using <a href="https://streamlit.io/" target="_blank" style="text-decoration:none; color:gray;">Streamlit</a> by <strong>Mehul Jain</strong></p>
+    <p>© 2025 Greek. All rights reserved.</p>
+    <p>
+        <a href="https://www.linkedin.com/in/mehul-jain-368020193" target="_blank" style="text-decoration:none;">
+            <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" style="vertical-align:middle;"/>
+        </a>
+    </p>
+</div>
+"""
+
+st.markdown(footer_html, unsafe_allow_html=True)
