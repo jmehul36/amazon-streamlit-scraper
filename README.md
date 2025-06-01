@@ -16,10 +16,4 @@ A simple web app built with **Streamlit** and **BeautifulSoup** to scrape produc
 
 ## 🌐 Live Demo
 
-> Deploy the app on **[Streamlit Cloud](https://streamlit.io/cloud)**  
-> No requirements.txt needed — just upload the code and go!
-
----
-
-## 📁 Project Structure
-
+> Deployed the app on **[Streamlit Cloud](https://amazon-app-scraper-yf9hfhwauwk7ljd8nmhc5o.streamlit.app/)**  
