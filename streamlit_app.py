@@ -11,6 +11,10 @@ st.set_page_config(
 
 st.markdown("# 🛍️ Amazon Product Scraper")
 st.markdown("Paste an Amazon product URL below to extract product details.")
+st.markdown(
+    "📝 **Note:** Amazon may block requests if you paste multiple links too quickly. "
+    "Please wait a few seconds between scrapes to avoid getting blocked."
+)
 
 write_headers()
 
@@ -36,7 +40,6 @@ if st.button("🚀 Scrape Product"):
                 if field != "Image URL":
                     st.markdown(f"**{field}:** {result[field]}")
 
-            # Allow CSV download
             with open(CSV_FILE, "rb") as f:
                 st.download_button(
                     label="📥 Download CSV",
@@ -44,3 +47,13 @@ if st.button("🚀 Scrape Product"):
                     file_name="amazon_product_data.csv",
                     mime="text/csv"
                 )
+
+# Footer
+st.markdown("---")
+st.markdown(
+    """
+    Made with ❤️ using [Streamlit](https://streamlit.io/) by **Mehul Jain**  
+    [![LinkedIn](https://cdn-icons-png.flaticon.com/24/174/174857.png)](https://www.linkedin.com/in/mehul-jain-368020193)
+    """,
+    unsafe_allow_html=True
+)
