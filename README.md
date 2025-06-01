@@ -7,7 +7,7 @@ A simple web app built with **Streamlit** and **BeautifulSoup** to scrape produc
 ## 🚀 Features
 
 - ✅ Extracts ASIN, title, brand, price, rating, reviews, availability, image, category, and description
-- 📦 Saves all product data to `out.csv`
+- 📦 Saves all product data to `amazon_product_data.csv`
 - 🖼️ Displays product image and details in an easy-to-read format
 - 📥 Download CSV of scraped data
 - 🧼 Clean and responsive Streamlit UI
