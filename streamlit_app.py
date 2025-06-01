@@ -15,6 +15,7 @@ st.markdown("Paste an Amazon product URL below to extract product details.")
 write_headers()
 
 url = st.text_input("🔗 Enter Amazon Product URL", placeholder="https://www.amazon.in/...")
+
 if st.button("🚀 Scrape Product"):
     if not url.startswith("http"):
         st.warning("⚠️ Please enter a valid Amazon product URL.")
@@ -26,13 +27,16 @@ if st.button("🚀 Scrape Product"):
             st.error(f"❌ Error: {result['error']}")
         else:
             st.success("✅ Product scraped successfully!")
-            st.image(result["Image URL"], caption=result["Title"], use_column_width=True)
+
+            if result["Image URL"] != "NA":
+                st.image(result["Image URL"], caption=result["Title"], width=250)
 
             st.markdown("### 📦 Product Information")
             for field in FIELDS:
                 if field != "Image URL":
                     st.markdown(f"**{field}:** {result[field]}")
 
+            # Allow CSV download
             with open(CSV_FILE, "rb") as f:
                 st.download_button(
                     label="📥 Download CSV",
