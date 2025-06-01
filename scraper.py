@@ -35,7 +35,7 @@ def get_text(soup, selector):
     tag = soup.select_one(selector)
     return tag.get_text(strip=True).replace(',', '') if tag else "NA"
 
-def main(url):
+def scrape_amazon_product(url):
     try:
         response = requests.get(url, headers=HEADERS)
         response.raise_for_status()
