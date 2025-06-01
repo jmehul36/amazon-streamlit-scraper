@@ -16,4 +16,10 @@ A simple web app built with **Streamlit** and **BeautifulSoup** to scrape produc
 
 ## 🌐 Live Demo
 
-> Deployed the app on **[Streamlit Cloud](https://amazon-app-scraper-yf9hfhwauwk7ljd8nmhc5o.streamlit.app/)**  
+> Deployed the app on **[Streamlit Cloud](https://amazon-app-scraper-yf9hfhwauwk7ljd8nmhc5o.streamlit.app/)**
+
+---
+
+## ⚠️ Note
+
+Amazon may block requests if you paste multiple links too quickly. Please wait a few seconds between scrapes to avoid getting blocked.
